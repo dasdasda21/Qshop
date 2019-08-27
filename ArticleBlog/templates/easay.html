@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+{#project:{{ project }}#}
+{#    {% for i in project %}#}
+{#    <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ i }}</p>#}
+{#    {% endfor %}#}
+{#{{ s.say }}<br>#}
+{#name:{{ name.upper }}#}
+{#project:{{ project.2 }}#}
+{#score:{{ score.python }}#}
+    <table border="1px">
+        <thead>
+        <tr>
+            <th>游戏</th>
+            <th>等级</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in hapi %}
+            <tr>
+                <td>{{ i.name }}</td>
+                <td>{{ i.dengji }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div>
+    <p>forloop变量案例</p>
+    <hr>
+        {% for i in outer %}
+            <h4>我很棒：{{ forloop.counter }}</h4>
+            {% for t in hapi %}
+                <p>我很棒棒:{{ forloop.counter }}</p>
+            {% endfor %}
+        {% endfor %}
+</div>
+<div>
+    <p>if标签案例</p>
+    <hr>
+        {% if login_valid %}
+            <a href="#">退出登录</a>
+        {% else %}
+            <a href="#">登录</a>
+        {% endif %}
+</div>
+<div>
+        <p>ifequal标签案例</p>
+        <hr>
+            {% ifequal login_valid 1 %}
+                <a href="#">退出登录</a>
+            {% else %}
+                <a href="#">登录</a>
+            {% endifequal %}
+    </div>
+<div>
+    <p>{{ commit }}</p>
+    <p>{{ commit|safe }}</p>
+</div>
+</body>
+</html>

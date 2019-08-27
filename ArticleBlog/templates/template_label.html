@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template_label</title>
+</head>
+<body>
+<h2>模板标签</h2>
+<div>
+    <p>for标签</p>
+    <hr>
+    project:{{ project }}
+    {% for p in project %}
+        <p>&nbsp;&nabla;&nabla;&nabla;{{ p }}</p>
+
+</div>
+<hr>
+<div>
+    <p>for标签案例</p>
+    <hr>
+    <table border="1px">
+        <thead>
+        <tr>
+            <th>
+                姓名
+            </th>
+            <th>
+                年龄
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>老李</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>老王5</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>老刘</td>
+                <td>44</td>
+            </tr>    >
+            <tr>
+                <td>老深</td>
+                <td>123</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div>
+    <p>forloop变量案例</p>
+    <hr>
+        <h3>outter的forllop</h3>
+</div>
+
+
+
+</body>
+</html>
