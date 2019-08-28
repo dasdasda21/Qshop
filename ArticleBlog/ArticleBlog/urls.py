@@ -17,21 +17,9 @@ from django.contrib import admin
 from django.urls import path,re_path
 # from ArticleBlog.rwe import *
 from ArticleBlog.kool import *
+from ArticleBlog.wq import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('luo/', index),
-    # re_path(r'^$', index),
-    path('luo/', nice)
-
-
-
-
+    re_path(r'^$', c),
+    re_path(r'^$', d),
 ]
-
-
-#     re_path(r'^$', index),
-#     re_path(r'page/(?P<page>\d{1,2})',page_list),
-#     path('tv/',template_variable),
-#     path('tl',template_label),
-#
-# ]
