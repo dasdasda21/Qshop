@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'xo4tjopw-12&!6-wm2@!l)*g7f*nq%g2hfaboo#xz-qpt2l-&9'
+SECRET_KEY = '6+)cx_#*#=rwgvb35ge(^=ubw17vx=4*6ray%-hg33)zydpo0+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Article'
+    'Article',
+    'ckeditor',
+    'ckeditor_uploader'
 ]
 
 MIDDLEWARE = [
@@ -56,7 +58,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,'templates')
+            os.path.join(BASE_DIR,"templates")
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -79,10 +81,11 @@ WSGI_APPLICATION = 'ArticleBlog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "articleblog",
+        'NAME': 'pachong',
         'HOST':"localhost",
-        'USER': "root",
-        'PASSWORD': "22222",
+        'USER':"root",
+        'PASSWORD':"22222",
+
     }
 }
 
@@ -124,9 +127,11 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
+STATICFILES_DIRS=(
+    os.path.join(BASE_DIR,"static"),
 )
-
-MEDIA_URL ="/media/"
+MEDIA_URL="/media/"
 MEDIA_ROOT=os.path.join(BASE_DIR,"static")
+
+CKEDITOR_UPLOAD_PATH="uploads/"
+CKEDITOR_IMAGE_BACKEND='pillow'

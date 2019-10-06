@@ -1,149 +1,31 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="gb2312">
-<title>╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М</title>
-<meta name="keywords" content="╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М" />
-<meta name="description" content="╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М" />
-<link href="css/base.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet">
-<!--[if lt IE 9]>
-<script src="js/modernizr.js"></script>
-<![endif]-->
-<script type="text/javascript" src="js/jquery.js"></script>
-</head>
-<body>
-<div id="wrapper">
-<header>
-  <div class="headtop"></div>
-  <div class="contenttop">
-    <div class="logo f_l">╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М</div>
-    <div class="search f_r">
-      <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
-        <input name="keyboard" id="keyboard" class="input_text" value="гКйДхК╧ь╪Эвж" style="color: rgb(153, 153, 153);" onfocus="if(value=='гКйДхК╧ь╪Эвж'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='гКйДхК╧ь╪Эвж'}" type="text">
-        <input name="show" value="title" type="hidden">
-        <input name="tempid" value="1" type="hidden">
-        <input name="tbname" value="news" type="hidden">
-        <input name="Submit" class="input_submit" value="кякВ" type="submit">
-      </form>
-    </div>
-    <div class="blank"></div>
-    <nav>
-      <div  class="navigation">
-        <ul class="menu">
-          <li><a href="index.html">мЬу╬йврЁ</a></li>
-          <li><a href="#">╧ьсзнр</a>
-            <ul>
-              <li><a href="about.html">╦Жхк╪Р╫И</a></li>
-              <li><a href="listpic.html">╦ЖхкоЮ╡А</a></li>
-            </ul>
-          </li>
-          <li><a href="#">нр╣дху╪г</a>
-            <ul>
-              <li><a href="newslistpic.html">╦Жхкху╪г</a></li>
-              <li><a href="newslistpic.html">я╖о╟╠й╪г</a></li>
-            </ul>
-          </li>
-          <li><a href="newslistpic.html">╪╪йУндуб</a> </li>
-          <li><a href="#">╦ЬнраТят</a> </li>
-        </ul>
-      </div>
-    </nav>
-    <SCRIPT type=text/javascript>
-	// Navigation Menu
-	$(function() {
-		$(".menu ul").css({display: "none"}); // Opera Fix
-		$(".menu li").hover(function(){
-			$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
-		},function(){
-			$(this).find('ul:first').css({visibility: "hidden"});
-		});
-	});
-</SCRIPT> 
-  </div>
-</header>
-<div class="container">
-  <div class="con_content">
+
+{% extends 'base.html' %}
+
+{% block content %}
     <div class="about_box">
-      <h2 class="nh1"><span>дЗожтз╣дн╩жцйгё╨<a href="/" target="_blank">мЬу╬йврЁ</a>>><a href="#" target="_blank">╦Жхкху╪г</a></span><b>╦Жхкху╪г</b></h2>
+      <h2 class="nh1"><span>Ф┌╗Г▌╟Е°╗Г └Д╫█Г╫╝Ф≤╞О╪ <a href="/" target="_blank">Г╫▒Г╚≥И╕√И║╣</a>>><a href="#" target="_blank">Д╦╙Д╨╨Ф≈╔Х╝╟</a></span><b>Д╦╙Д╨╨Ф≈╔Х╝╟</b></h2>
       <div class="dtxw box">
-        <li>
-          <div class="dttext f_l">
-            <ul>
-              <h2><a href="/">╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М</a></h2>
-              <p>╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬Мт╜ж╜т╜н╤жьож╬╜╣Д....</p>
-              <span>2017-3-10</span>
-            </ul>
-          </div>
-          <div class="xwpic f_r"><a href="/"><img src="images/02.jpg"></a></div>
-        </li>
-        <li>
-          <div class="dttext f_l">
-            <ul>
-              <h2><a href="/">╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М</a></h2>
-              <p>╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М╧Ц╟╡аЛох....</p>
-              <span>2017-3-10</span>
-            </ul>
-          </div>
-          <div class="xwpic f_r"><a href="/"><img src="images/01.jpg"></a></div>
-        </li>
-        <li>
-          <div class="dttext f_l">
-            <ul>
-              <h2><a href="/">╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М</a></h2>
-              <p>╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬Мт╜ж╜т╜н╤жьож╬╜╣Д....</p>
-              <span>2017-3-10</span>
-            </ul>
-          </div>
-          <div class="xwpic f_r"><a href="/"><img src="images/03.jpg"></a></div>
-        </li>
-        <li>
-          <div class="dttext f_l">
-            <ul>
-              <h2><a href="/">╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М</a></h2>
-              <p>╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬Мт╜ж╜т╜н╤жьож╬╜╣Д</p>
-              <span>2017-3-10</span>
-            </ul>
-          </div>
-          <div class="xwpic f_r"><a href="/"><img src="images/04.jpg"></a></div>
-        </li>
-        <li>
-          <div class="dttext f_l">
-            <ul>
-              <h2><a href="/">╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М</a></h2>
-              <p>╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬Мт╜ж╜т╜н╤жьож╬╜╣Д</p>
-              <span>2017-3-10</span>
-            </ul>
-          </div>
-          <div class="xwpic f_r"><a href="/"><img src="images/02.jpg"></a></div>
-        </li>
-        <li>
-          <div class="dttext f_l">
-            <ul>
-              <h2><a href="/">╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М</a></h2>
-              <p>╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬М╦Жхк╡╘©мдё╟Е╧е╣До╣апж╝║╙║╙╫╜дод╚╬Мт╜ж╜т╜н╤жьож╬╜╣Д</p>
-              <span>2017-3-10</span>
-            </ul>
-          </div>
-          <div class="xwpic f_r"><a href="/"><img src="images/06.jpg"></a></div>
-        </li>
+        {% for art in page_article %}
+          <li>
+            <div class="dttext f_l">
+                <ul>
+                  <h2><a href="/new/{{ art.id }}">{{ art.title }}</a></h2>
+                  <p>{{ art.description }}</p>
+                  <span>{{ art.public_time }}</span>
+                </ul>
+            </div>
+            <div class="xwpic f_r"><a href="/"><img src="/static/{{ art.picture }}"></a></div>
+          </li>
+        {% endfor %}
       </div>
-      <div class="pagelist">рЁ╢нё╨1/1 ц©рЁ25 вэйЩ10<a href="/">йврЁ</a><a href="/">иор╩рЁ</a><a href="/">обр╩рЁ</a><a href="/">н╡рЁ</a></div>
+      <!--<div class="pagelist">И║╣Ф╛║О╪ 1/1 Ф╞▐И║╣25 Ф─╩Ф∙╟10<a href="/">И╕√И║╣</a><a href="/">Д╦┼Д╦─И║╣</a><a href="/">Д╦▀Д╦─И║╣</a><a href="/">Е╟╬И║╣</a></div>-->
+      <div class="pagelist">И║╣Ф╛║О╪ {{ p }}/{{ article_list.num_pages }} Ф╞▐И║╣{{ page_size }} Ф─╩Ф∙╟{{ article_list.count }}
+          <a href="/">И╕√И║╣</a>
+          <a href="/">Д╦┼Д╦─И║╣</a>
+          {% for p in page_range %}
+            <a href="/newlist/{{ p }}">{{ p }}</a>
+          {% endfor %}
+          <a href="/">Д╦▀Д╦─И║╣</a>
+          <a href="/">Е╟╬И║╣</a></div>
     </div>
-  </div>
-  <div class="blank"></div>
-  <!-- container╢ЗбК ╫АйЬ -->
-  
-  <footer>
-    <div class="footer">
-      <div class="f_l">
-        <p>All Rights Reserved ╟Фх╗кЫспё╨<a href="http://www.yangqq.com">яНгЮ╦Жхк╡╘©м</a> ╠╦╟╦╨её╨йЯICP╠╦00000000╨е</p>
-      </div>
-      <div class="f_r textr">
-        <p>Design by DanceSmile</p>
-      </div>
-    </div>
-  </footer>
-</div>
-</body>
-</html>
+{% endblock %}

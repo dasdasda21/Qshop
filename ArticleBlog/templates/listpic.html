@@ -1,99 +1,29 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="gb2312">
-<title>¸öÈË²©¿ÍÄ£°å¹ÅµäÏµÁĞÖ®¡ª¡ª½­ÄÏÄ«¾í</title>
-<meta name="keywords" content="¸öÈË²©¿ÍÄ£°å¹ÅµäÏµÁĞÖ®¡ª¡ª½­ÄÏÄ«¾í" />
-<meta name="description" content="¸öÈË²©¿ÍÄ£°å¹ÅµäÏµÁĞÖ®¡ª¡ª½­ÄÏÄ«¾í" />
-<link href="css/base.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet">
-<!--[if lt IE 9]>
-<script src="js/modernizr.js"></script>
-<![endif]-->
-<script type="text/javascript" src="js/jquery.js"></script>
-</head>
-<body>
-<div id="wrapper">
-<header>
-  <div class="headtop"></div>
-  <div class="contenttop">
-    <div class="logo f_l">¸öÈË²©¿ÍÄ£°å¹ÅµäÏµÁĞÖ®¡ª¡ª½­ÄÏÄ«¾í</div>
-    <div class="search f_r">
-      <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
-        <input name="keyboard" id="keyboard" class="input_text" value="ÇëÊäÈë¹Ø¼ü×Ö" style="color: rgb(153, 153, 153);" onfocus="if(value=='ÇëÊäÈë¹Ø¼ü×Ö'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='ÇëÊäÈë¹Ø¼ü×Ö'}" type="text">
-        <input name="show" value="title" type="hidden">
-        <input name="tempid" value="1" type="hidden">
-        <input name="tbname" value="news" type="hidden">
-        <input name="Submit" class="input_submit" value="ËÑË÷" type="submit">
-      </form>
-    </div>
-    <div class="blank"></div>
-    <nav>
-      <div  class="navigation">
-        <ul class="menu">
-          <li><a href="index.html">ÍøÕ¾Ê×Ò³</a></li>
-          <li><a href="#">¹ØÓÚÎÒ</a>
-            <ul>
-              <li><a href="about.html">¸öÈË¼ò½é</a></li>
-              <li><a href="listpic.html">¸öÈËÏà²á</a></li>
-            </ul>
-          </li>
-          <li><a href="#">ÎÒµÄÈÕ¼Ç</a>
-            <ul>
-              <li><a href="newslistpic.html">¸öÈËÈÕ¼Ç</a></li>
-              <li><a href="newslistpic.html">Ñ§Ï°±Ê¼Ç</a></li>
-            </ul>
-          </li>
-          <li><a href="newslistpic.html">¼¼ÊõÎÄÕÂ</a> </li>
-          <li><a href="#">¸øÎÒÁôÑÔ</a> </li>
+
+{% extends 'base.html' %}
+
+{% block title %}
+    åšå®¢æ–‡ç« é¡µ
+{% endblock %}
+
+{% block content %}
+      <div class="about_box">
+        <h2 class="nh1"><span>æ‚¨ç°åœ¨çš„ä½ç½®æ˜¯ï¼š<a href="/" target="_blank">ç½‘ç«™é¦–é¡µ</a>>><a href="#" target="_blank">ä¿¡æ¯æµè§ˆ</a></span><b>ä¸ªäººç®€ä»‹</b></h2>
+        <div class="f_box">
+          <p class="a_title">{{ article.title }}</p>
+          <p class="p_title"></p>
+          <!--  <p class="box_p"><span>å‘å¸ƒæ—¶é—´ï¼š2017-07-07 15:12:42</span><span>ä½œè€…ï¼šå”å­æ–‡</span><span>æ¥æºï¼šç¨½æŸ¥æ”¯é˜Ÿ</span><span>ç‚¹å‡»ï¼š111056</span></p>-->
+          <!-- å¯ç”¨äºå†…å®¹æ¨¡æ¿ -->
+        </div>
+        <ul class="about_content">
+          <p> {{ article.content }}</p>
+          <p><img src="/static/{{ article.picture }}"></p>
         </ul>
+        <!--    <div class="nextinfos">
+      <p>ä¸Šä¸€ç¯‡ï¼š<a href="/">åŒºä¸­åŒ»åŒ»é™¢å¼€å±•å¿—æ„¿æœåŠ¡æ´»åŠ¨</a></p>
+      <p>ä¸‹ä¸€ç¯‡ï¼š<a href="/">å¹¿å®‰åŒºæ‰¹å‡†â€œå•ç‹¬ä¸¤å­©â€500ä¾‹</a></p>
+    </div>-->
+        <!-- å¯ç”¨äºå†…å®¹æ¨¡æ¿ -->
+
+        <!-- containerä»£ç  ç»“æŸ -->
       </div>
-    </nav>
-    <SCRIPT type=text/javascript>
-	// Navigation Menu
-	$(function() {
-		$(".menu ul").css({display: "none"}); // Opera Fix
-		$(".menu li").hover(function(){
-			$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
-		},function(){
-			$(this).find('ul:first').css({visibility: "hidden"});
-		});
-	});
-</SCRIPT> 
-  </div>
-</header>
-<div class="container">
-  <div class="con_content">
-    <div class="about_box">
-      <h2 class="nh1"><span>ÄúÏÖÔÚµÄÎ»ÖÃÊÇ£º<a href="/" target="_blank">ÍøÕ¾Ê×Ò³</a>>><a href="#" target="_blank">¸öÈËÏà²á</a></span><b>¸öÈËÏà²á</b></h2>
-      <div class="lispic">
-        <ul>
-          <li><a href="/"><img src="images/01.jpg"><span>Í¼Æ¬Õ¹Ê¾</span></a></li>
-          <li><a href="/"><img src="images/02.jpg"><span>Í¼Æ¬Õ¹Ê¾</span></a></li>
-          <li><a href="/"><img src="images/03.jpg"><span>Í¼Æ¬Õ¹Ê¾</span></a></li>
-          <li><a href="/"><img src="images/04.jpg"><span>Í¼Æ¬Õ¹Ê¾</span></a></li>
-          <li><a href="/"><img src="images/03.jpg"><span>Í¼Æ¬Õ¹Ê¾</span></a></li>
-          <li><a href="/"><img src="images/06.jpg"><span>Í¼Æ¬Õ¹Ê¾</span></a></li>
-          <li><a href="/"><img src="images/01.jpg"><span>Í¼Æ¬Õ¹Ê¾</span></a></li>
-          <li><a href="/"><img src="images/02.jpg"><span>Í¼Æ¬Õ¹Ê¾</span></a></li>
-        </ul>
-      </div>
-      <div class="pagelist">Ò³´Î£º1/1 Ã¿Ò³25 ×ÜÊı10<a href="/">Ê×Ò³</a><a href="/">ÉÏÒ»Ò³</a><a href="/">ÏÂÒ»Ò³</a><a href="/">Î²Ò³</a></div>
-    </div>
-  </div>
-  <div class="blank"></div>
-  <!-- container´úÂë ½áÊø -->
-  
-  <footer>
-    <div class="footer">
-      <div class="f_l">
-        <p>All Rights Reserved °æÈ¨ËùÓĞ£º<a href="http://www.yangqq.com">ÑîÇà¸öÈË²©¿Í</a> ±¸°¸ºÅ£ºÊñICP±¸00000000ºÅ</p>
-      </div>
-      <div class="f_r textr">
-        <p>Design by DanceSmile</p>
-      </div>
-    </div>
-  </footer>
-</div>
-</body>
-</html>
+{% endblock %}

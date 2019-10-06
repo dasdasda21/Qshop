@@ -15,11 +15,25 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,re_path
-# from ArticleBlog.rwe import *
-from ArticleBlog.kool import *
-from ArticleBlog.wq import *
+from ArticleBlog.views import *
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^$', c),
-    re_path(r'^$', d),
+    # path('li/',newlist),
+    # path('l/',newlis),
+    # path('l/index.html/',newl),
+    # re_path('page/(?P<page>\d{1,2})',index)
+    # path('luo/',form_exam),
+    path('index/',index),
+    # path('about/',about),
+    # path('listpic/',listpic),
+    # re_path(r'newslistpic/(?P<type>\w+)/(?P<p>\d{1,2})',newslistpic),
+    # re_path(r'newslistpic/(?P<p>\d{1,2})',newslistpic),
+    path('base/',register),
+    # path('agp/', ajax_get_page),
+    # path('agd/', ajax_get_data),
+    # path('app/', ajax_post_page),
+    # path('apd/', ajax_post_data),
+    path('cookies/', cookies),
+    path('logout/', logout),
 ]
