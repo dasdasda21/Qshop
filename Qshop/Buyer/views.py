@@ -321,7 +321,27 @@ def pay_order_more(request):
     return render(request,"buyer/pay_order.html",locals())
 
 from Qshop.settings import alipay_public_key_string,alipay_private_key_string
-# def AlipayViews(request):
+from alipay import AliPay
+from Qshop.settings import alipay_public_key_string,alipay_private_key_string
+def AlipayViews(request):
+    order_number =request.GET.get("order_number")    #支付功能
+    order_total =request.GET.get("total")
+    alipay = AliPay(
+        appid="2016101200667739",
+        app_notify_url=None,
+        app_private_key_string=alipay_private_key_string,
+        alipay_public_key_string=alipay_public_key_string,
+        sign_type="RSA2"
+    )
+    order_string = alipay.api_alipay_trade_page_pay(
+        out_trade_no=order_number,
+        total_amount=str(order_total),
+        subject="生鲜交易",
+        return_url="http://127.0.0.1:8000/buyer/pay_result/",
+        notify_url="http://127.0.0.1:8000/buyer/pay_result/",
+    )
+    result ="https://openapi.alipaydev.com/gateway.do?"+order_string
+    return HttpResponseRedirect(result)
 
 
 def add_cart(request):                #前端ajax通过路由传递参数goods_id 和count
