@@ -344,7 +344,7 @@ def AlipayViews(request):
     return HttpResponseRedirect(result)
 
 
-def add_cart(request):                #前端ajax通过路由传递参数goods_id 和count
+def add_cart(request):                #ajax:前端ajax通过路由传递参数goods_id 和count
     result ={                           #此视图为点击加入购物车的方法
         "code":200,
         "data":""
