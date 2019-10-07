@@ -235,7 +235,7 @@ def goods_list(request):
     request_type =request.GET.get("type")
     keyword =request.GET.get("keywords")
     goods_list=[]
-    if request_type == "t":
+    if request_type == "t":                           #列表数据流程
         if keyword:
             id=int(keyword)
             goods_type =GoodsType.objects.get(id=id)
